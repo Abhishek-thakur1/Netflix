@@ -46,7 +46,7 @@ router.delete('/:id',verify,  async (req, res) => {
             res.status(500).json(error)
         }
     } else {
-        res.status(403).json("You are not allowed!")
+        res.status(403).json("You are not allowed to delete the movie!")
     }
 })
 
@@ -96,7 +96,7 @@ router.get('/',verify,  async (req, res) => {
             res.status(500).json(error)
         }
     } else {
-        res.status(403).json("You are not allowed!")
+        res.status(403).json("You are not allowed to do this!")
     }
 })
 
