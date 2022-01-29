@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const authRouter = require('./routes/auth')
 const userRouter = require('./routes/users')
 const movieRouter = require('./routes/movies')
+const listRouter = require('./routes/lists')
 
 dotenv.config();
 
@@ -22,5 +23,6 @@ app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/users', userRouter)
 app.use('/api/movies', movieRouter)
+app.use('/api/lists', listRouter)
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
