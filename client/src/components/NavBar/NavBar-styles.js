@@ -39,10 +39,28 @@ export const Left = styled.div`
         cursor: pointer;
         user-select: none;
 
-        @media only screen and (max-width: 768px){
-            flex-direction: column;
-        }
     }
+`;
+export const List = styled.ul`
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px){
+            flex-direction: column;
+            position: fixed;
+            top: 20%;
+            right: 0;
+        }
+`;
+export const Item = styled.li`
+    font-size:1.6rem;
+    margin-left: 2.1rem;
+    font-weight: 500;
+    letter-spacing:0.05rem;
+    cursor: pointer;
+    user-select: none;
 `;
 export const Right = styled.div`
     display: flex; 
