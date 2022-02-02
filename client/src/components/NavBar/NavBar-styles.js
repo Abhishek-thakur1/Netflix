@@ -31,15 +31,7 @@ export const Left = styled.div`
         margin-right: 5rem;
         cursor: pointer;
     }
-    span{
-        font-size:1.6rem;
-        margin-left: 2.1rem;
-        font-weight: 500;
-        letter-spacing:0.05rem;
-        cursor: pointer;
-        user-select: none;
 
-    }
 `;
 export const List = styled.ul`
     list-style-type: none;
@@ -50,8 +42,11 @@ export const List = styled.ul`
     @media only screen and (max-width: 768px){
             flex-direction: column;
             position: fixed;
-            top: 20%;
+            top: 0;
             right: 0;
+            background-color: rgba(0,0,0,0.99);
+            width: 60%;
+            height: 100vh;
         }
 `;
 export const Item = styled.li`
@@ -61,6 +56,29 @@ export const Item = styled.li`
     letter-spacing:0.05rem;
     cursor: pointer;
     user-select: none;
+
+    @media only screen and (max-width: 768px){
+        font-size: 2.7rem;
+        margin-bottom: 3.1rem;
+        padding: .7rem 1.7rem;
+        text-align: center;
+        width: 80%;
+
+        &:hover {
+            background-color: var(--dark-grey);
+        }
+
+        &:last-child {
+            margin-top:5rem;
+            background-color: #e50914;
+            line-height: normal;
+            padding: .7rem 1.7rem;
+            font-weight: 400;
+            font-size: 2.7rem;
+            border-radius: .3rem;
+            /* width: auto; */
+        }
+    }
 `;
 export const Right = styled.div`
     display: flex; 
