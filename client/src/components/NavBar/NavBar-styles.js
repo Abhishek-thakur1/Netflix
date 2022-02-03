@@ -31,7 +31,15 @@ export const Left = styled.div`
         margin-right: 5rem;
         cursor: pointer;
     }
-
+    .close{
+        position: absolute;
+        right: 3rem;
+        top: 2rem;
+        font-size: 3.5rem;
+        font-weight: 500;
+        z-index: 10000;
+        cursor: pointer;
+    }
 `;
 export const List = styled.ul`
     list-style-type: none;
@@ -66,6 +74,7 @@ export const Item = styled.li`
 
         &:hover {
             background-color: var(--dark-grey);
+            border-radius: 0.3rem;
         }
 
         &:last-child {
