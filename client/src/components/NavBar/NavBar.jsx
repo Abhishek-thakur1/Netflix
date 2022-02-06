@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Wrapper, Container, Left,List,Item, Profile, Right } from './NavBar-styles'
+import { Wrapper, Container, Left,List,Item,Psuedo, Profile, Right } from './NavBar-styles'
 import { Search, Notifications, ArrowDropDown, Close } from '@mui/icons-material';
 import OutsideClick from '../../outsideClick';
 
@@ -27,6 +27,7 @@ const NavBar = () => {
             <Container>
                 <Left>
                     <img src="https://ik.imagekit.io/gwmjmoaowfjn/_PXPNG.COM_Red_Large_Netflix_Logo_Text_free_image_-_2560x1440_pcx-Ydcko.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643627546366" alt=" Logo.." />
+                    {(window.innerWidth <= 768 || isWidth) ? <Psuedo onClick={() => setVisible(false)} className={visible ? 'show' : ' '}/> : ' ' }
                     <List ref={boxRef} className={visible ? 'show' : ' '} >
                         {(window.innerWidth <= 768 || isWidth) ? <Close className='close' onClick={() => setVisible(false)}/> : ' ' }
                         <Item onClick={() => setVisible(false)}>Home</Item>

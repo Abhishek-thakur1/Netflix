@@ -22,6 +22,22 @@ export const Container = styled.div`
     padding: 0rem 5rem;
     height: 6rem;
 `;
+
+export const Psuedo = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+
+    &.show {
+        transform: translateX(0%);
+    }
+`;
 export const Left = styled.div`
     display: flex;    
     align-items: center;
@@ -73,7 +89,6 @@ export const List = styled.ul`
 
             &.show {
                 transform: translateX(0%);
-                
             }
         }
 `;
