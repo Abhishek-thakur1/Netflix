@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
 import { Wrapper, Container, Left,List,Item, Profile, Right } from './NavBar-styles'
 import { Search, Notifications, ArrowDropDown, Close } from '@mui/icons-material';
-import OutsideClick from '../../outsideClick'
+import OutsideClick from '../../outsideClick';
+
 
 const NavBar = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isWidth, setIsWidth] = useState(false);
+    const [visible, setVisible] = useState(false);
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return () => window.onscroll = null;
@@ -17,14 +19,16 @@ const NavBar = () => {
 
     const boxRef = useRef(null)
     const boxOutsideClick = OutsideClick(boxRef)
+    console.log(visible);
+    console.log(boxOutsideClick);
 
     return (
         <Wrapper className={isScrolled ? 'dark' : ' '}>     
             <Container>
                 <Left>
                     <img src="https://ik.imagekit.io/gwmjmoaowfjn/_PXPNG.COM_Red_Large_Netflix_Logo_Text_free_image_-_2560x1440_pcx-Ydcko.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643627546366" alt=" Logo.." />
-                    {(window.innerWidth <= 768 || isWidth) ? <Close className='close'/> : ' '}
-                    <List ref={(window.innerWidth <= 768) ? 'boxRef' : ' '}>
+                    <List ref={boxRef} className={visible ? 'show' : ' '} >
+                        {(window.innerWidth <= 768 || isWidth) ? <Close className='close' onClick={() => setVisible(false)}/> : ' ' }
                         <Item>Home</Item>
                         <Item>Movies</Item>
                         <Item>Series</Item>
@@ -38,7 +42,7 @@ const NavBar = () => {
                     <Search className="icon"/>
                     <span>KID</span>
                     <Notifications className="icon"/>
-                    <img src="https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg" alt='DP' />
+                    <img src="https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg" alt='DP' onClick={() => setVisible(true)}/>
                     {(window.innerWidth <= 768 || isWidth) ?
                         ' '
                         :

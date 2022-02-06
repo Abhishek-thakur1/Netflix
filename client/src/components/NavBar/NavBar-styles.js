@@ -39,6 +39,7 @@ export const Left = styled.div`
         font-weight: 500;
         z-index: 10000;
         cursor: pointer;
+        /* display:none; */
     }
 `;
 export const List = styled.ul`
@@ -46,6 +47,7 @@ export const List = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+
 
     @media only screen and (max-width: 768px){
             flex-direction: column;
@@ -55,6 +57,11 @@ export const List = styled.ul`
             background-color: rgba(0,0,0,0.99);
             width: 60%;
             height: 100vh;
+            display:none;
+
+            &.show {
+                display: flex;
+            }
         }
 `;
 export const Item = styled.li`
