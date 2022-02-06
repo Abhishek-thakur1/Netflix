@@ -41,12 +41,19 @@ export const Left = styled.div`
         cursor: pointer;
         /* display:none; */
     }
+
+    @media only screen and (max-width: 768px){
+        img{
+            margin-left: -2rem;
+        }
+    }
 `;
 export const List = styled.ul`
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transition: all 1s ease-in; */
 
 
     @media only screen and (max-width: 768px){
@@ -54,13 +61,19 @@ export const List = styled.ul`
             position: fixed;
             top: 0;
             right: 0;
-            background-color: rgba(0,0,0,0.99);
+            background-color: rgba(0,0,0,0.97);
+            /* clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0 99%); */
             width: 60%;
             height: 100vh;
-            display:none;
+            transform: translateX(100%);
+            transition: transform .3s;
+            will-change: transform;
+
+            
 
             &.show {
-                display: flex;
+                transform: translateX(0%);
+                
             }
         }
 `;
@@ -73,7 +86,7 @@ export const Item = styled.li`
     user-select: none;
 
     @media only screen and (max-width: 768px){
-        font-size: 2.7rem;
+        font-size: 2.3rem;
         margin-bottom: 3.1rem;
         padding: .7rem 1.7rem;
         text-align: center;
@@ -90,7 +103,7 @@ export const Item = styled.li`
             line-height: normal;
             padding: .7rem 1.7rem;
             font-weight: 400;
-            font-size: 2.7rem;
+            font-size: 2.3rem;
             border-radius: .3rem;
             /* width: auto; */
         }
@@ -117,6 +130,18 @@ export const Right = styled.div`
         width: 4rem;
         border-radius: 50%;
         cursor: pointer;
+    }
+
+    @media only screen and (max-width: 768px){
+        margin-right:-2rem;
+        .icon{
+            font-size: 2.55rem;
+            margin-right: 2rem;
+        }
+
+        span{
+            font-size: 2.2rem;
+        }
     }
 `;
 

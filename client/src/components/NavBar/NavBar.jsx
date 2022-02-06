@@ -29,13 +29,13 @@ const NavBar = () => {
                     <img src="https://ik.imagekit.io/gwmjmoaowfjn/_PXPNG.COM_Red_Large_Netflix_Logo_Text_free_image_-_2560x1440_pcx-Ydcko.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643627546366" alt=" Logo.." />
                     <List ref={boxRef} className={visible ? 'show' : ' '} >
                         {(window.innerWidth <= 768 || isWidth) ? <Close className='close' onClick={() => setVisible(false)}/> : ' ' }
-                        <Item>Home</Item>
-                        <Item>Movies</Item>
-                        <Item>Series</Item>
-                        <Item>New And Popular</Item>
-                        <Item>My List</Item>
-                        {(window.innerWidth <= 768 || isWidth)? <Item>Settings</Item> : ' '}
-                        {(window.innerWidth <= 768 || isWidth)? <Item>Log Out</Item> : ' '}
+                        <Item onClick={() => setVisible(false)}>Home</Item>
+                        <Item onClick={() => setVisible(false)}>Movies</Item>
+                        <Item onClick={() => setVisible(false)}>Series</Item>
+                        <Item onClick={() => setVisible(false)}>New And Popular</Item>
+                        <Item onClick={() => setVisible(false)}>My List</Item>
+                        {(window.innerWidth <= 768 || isWidth)? <Item onClick={() => setVisible(false)}>Settings</Item> : ' '}
+                        {(window.innerWidth <= 768 || isWidth)? <Item onClick={() => setVisible(false)}>Log Out</Item> : ' '}
                     </List>
                 </Left>
                 <Right>
