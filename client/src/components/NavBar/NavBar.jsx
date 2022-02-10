@@ -43,7 +43,7 @@ const NavBar = () => {
                     <Search className="icon"/>
                     <span>KID</span>
                     <Notifications className="icon"/>
-                    <img src="https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg" alt='DP' onClick={() => setVisible(true)}/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxkUaRN6iLNsiuVx7B3m9ooJHnWlacU5fXXQ&usqp=CAU" alt='DP' onClick={() => setVisible(true)}/>
                     {(window.innerWidth <= 768 || isWidth) ?
                         ' '
                         :
