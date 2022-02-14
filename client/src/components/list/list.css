@@ -1,0 +1,53 @@
+.list {
+  width: 100%;
+  margin-top: 1.1rem;
+}
+
+.list .listTitle {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 5rem;
+}
+
+.list .wrapper {
+  position: relative;
+}
+
+.list .wrapper .slideArrow {
+  height: 100%;
+  width: 5rem;
+  background-color: rgba(22, 22, 22, 0.5);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.list .wrapper .slideArrow.left {
+  left: 0;
+}
+
+.list .wrapper .slideArrow.right {
+  right: 0;
+}
+
+.list .wrapper .container {
+  margin-left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 1.1rem;
+  margin-bottom: 2.1rem;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/*# sourceMappingURL=list.css.map */

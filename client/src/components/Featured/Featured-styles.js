@@ -32,7 +32,7 @@ export const Category = styled.div`
         }
 `;
 export const Info = styled.div`
-    width: 100%;
+    width: 90%;
     position: absolute;
     left: 5rem;
     bottom: 5rem;
@@ -51,7 +51,7 @@ export const Info = styled.div`
             margin: 1rem 0rem;
             font-size: 1.6rem;
             color: #fff;
-            line-height: 1.2;
+            line-height: 1.25;
         }
     }
 
