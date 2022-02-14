@@ -4,14 +4,23 @@ export const Wrapper = styled.div`
     height: 90vh;
     position: relative;    
 
-    img{
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        object-fit: cover;
-    }
 `;
+export const FeaturedImage = styled.div`
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0,0,0,0.5) 20%,
+        rgba(0, 0, 0, 0) 100%
+    ),
+    url("https://w0.peakpx.com/wallpaper/857/946/HD-wallpaper-avengers-end-game-banner-avengers-endgame-2019-movies-movies-superheroes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+`;
+
 export const Category = styled.div`
     position: absolute;
         top: 80px;

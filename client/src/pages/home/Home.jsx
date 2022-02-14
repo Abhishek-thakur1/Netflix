@@ -7,7 +7,7 @@ import { Wrapper } from './Home-styles'
 const Home = () => {
     return (
         <Wrapper>
-            {/* <NavBar />
+            <NavBar />
             <Featured />
             <List />
             <List />
@@ -15,8 +15,8 @@ const Home = () => {
             <List />
             <List />
             <List />
-            <List /> */}
-            <Register />
+            <List />
+            {/* <Register /> */}
         </Wrapper>
     );
 };
