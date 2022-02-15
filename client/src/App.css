@@ -13,6 +13,10 @@ html{
   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-size: 62.5%;
 }
+a{ 
+  text-decoration: none;
+  color: inherit;
+}
 
 
 /* for responsiveness... */

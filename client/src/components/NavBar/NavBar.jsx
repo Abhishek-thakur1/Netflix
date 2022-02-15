@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Wrapper, Container, Left,List,Item,Psuedo, Profile, Right } from './NavBar-styles'
 import { Search, Notifications, ArrowDropDown, Close } from '@mui/icons-material';
+import {Link} from "react-router-dom"
 import OutsideClick from '../../outsideClick';
 
 
@@ -30,9 +31,9 @@ const NavBar = () => {
                     {(window.innerWidth <= 768 || isWidth) ? <Psuedo onClick={() => setVisible(false)} className={visible ? 'show' : ' '}/> : ' ' }
                     <List ref={boxRef} className={visible ? 'show' : ' '} >
                         {(window.innerWidth <= 768 || isWidth) ? <Close className='close' onClick={() => setVisible(false)}/> : ' ' }
-                        <Item onClick={() => setVisible(false)}>Home</Item>
-                        <Item onClick={() => setVisible(false)}>Movies</Item>
-                        <Item onClick={() => setVisible(false)}>Series</Item>
+                        <Link to='/'><Item onClick={() => setVisible(false)}>Home</Item></Link>
+                        <Link to='/movies'><Item onClick={() => setVisible(false)}>Movies</Item></Link>
+                        <Link to='/series'><Item onClick={() => setVisible(false)}>Series</Item></Link>
                         <Item onClick={() => setVisible(false)}>New And Popular</Item>
                         <Item onClick={() => setVisible(false)}>My List</Item>
                         {(window.innerWidth <= 768 || isWidth)? <Item onClick={() => setVisible(false)}>Settings</Item> : ' '}
